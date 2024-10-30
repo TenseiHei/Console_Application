@@ -6,33 +6,67 @@ namespace Console_Application
     {
         static void Main(string[] args)
         {
-            // We ask the user to input their age.
-            Console.WriteLine("How old are you?");
+            // Asking the user to input te date.
+            Console.WriteLine("What day is it today?" + "\n");
 
-            // We convert from string type to int type.
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\n");
+            // Getting the current date from the datetime object.
+            DayOfWeek dow = DateTime.Now.DayOfWeek;
 
-            // Displaying the users age.
-            Console.WriteLine("Your age is " + age);
-            Console.WriteLine("\n");
-            
-            // If age is less than or equal to 12
-            if (age <= 12)
-            {
-                Console.WriteLine("You are a child :)");
+            //Using switch case to display the correct date.
+            switch (dow)
+                {
+                    case DayOfWeek.Monday:
+                    string M = "Monday";
+                    string upcase = M.ToUpper();
+                    string day = $"Today is: {upcase}";
+                    Console.WriteLine(day + "\n");
+                    break;
+
+                    case DayOfWeek.Tuesday:
+                    string T = "Tuesday";
+                    string u = T.ToUpper();
+                    string d = $"Today is: {u}";
+                    Console.WriteLine(d + "\n");
+                    break;
+
+                    case DayOfWeek.Wednesday:
+                    string W = "Wednesday";
+                    string up = W.ToUpper();
+                    string da = $"Today is: {up}";
+                    Console.WriteLine(da + "\n");
+                    break;
+
+                    case DayOfWeek.Thursday:
+                    string TH = "Thursday";
+                    string upc = TH.ToUpper();
+                    string ad = $"Today is: {upc}";
+                    Console.WriteLine(ad + "\n");
+                    break;
+
+                    case DayOfWeek.Friday:
+                    string F = "Friday";
+                    string upca = F.ToUpper();
+                    string fr = $"Today is: {upca}";
+                    Console.WriteLine(fr + "\n");
+                    break;
+
+                    case DayOfWeek.Saturday:
+                    string S = "Saturday";
+                    string upcas = S.ToUpper();
+                    string sa = $"Today is: {upcas}";
+                    Console.WriteLine(sa + "\n");
+                    break;
+
+                    case DayOfWeek.Sunday:
+                    string SU = "Sunday";
+                    string upcased = SU.ToUpper();
+                    string sun = $"Today is: {upcased}";
+                    Console.WriteLine(sun + "\n");
+                    break;
             }
-            // If age is less than or equal to 19
-            else if (age <=19)
-            {
-                Console.WriteLine("You are a teenger... Your future is bright!");
-            }
-            // If age is above 19
-            else
-            {
-                Console.WriteLine("You are an adult... You're in your prime!!");
-            }
-            
+
+            // Allows the user to read then terminate.
+            Console.WriteLine("Press any key to terminate");
             Console.ReadLine();
         }
     }
