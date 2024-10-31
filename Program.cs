@@ -91,9 +91,9 @@ namespace Console_Application
                     break;
 
                     case 4:
-                    Console.WriteLine("\n");
                     break;
             }
+            Console.WriteLine("\n");
             Console.WriteLine("Press any key to terminate");
             Console.ReadLine();
         }
