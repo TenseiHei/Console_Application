@@ -7,90 +7,89 @@ namespace Console_Application
         static void Main(string[] args)
         {
             // We are asking the user to choose an option.
-            Console.WriteLine("Choose between options 1, 2, 3, and 4" + "\n");
-            int alpha = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Choose between options 1, 2, 3, and 4." + "\n");
+            int userOptions = Convert.ToInt32(Console.ReadLine());
 
             // Using switch case to output the correct option
-            switch (alpha)
+            switch (userOptions)
             {
                 case 1:
                     Console.WriteLine("\n");
                     // Request the user to input data.
-                    Console.WriteLine("Input a word or sentence" + "\n");
+                    Console.WriteLine("Input a word or sentence." + "\n");
                     // The data is stored in w.
-                    string w = Console.ReadLine();
+                    string input = Console.ReadLine();
                     Console.WriteLine("\n");
                     // Giving the user options on casing.
                     Console.WriteLine("Do you want your input to be upper or lower case?");
-                    Console.WriteLine("Indicate by typing (a) for upper or (b) for lower." + "\n");
-                    // Option a is stored in ab.
-                    string ab = "a";
+                    Console.WriteLine("Indicate by typing (u) for upper or (l) for lower." + "\n");
+                    // The users option is stored in "options".
+                    string options = Console.ReadLine();
 
-                    // The data is converted to uppercase.
-                    string upper = w.ToUpper();
-                    // The data is converted to lowercase.
-                    string lower = w.ToLower();
-
-                    // If the option is "a" uppercase, else lowercase.
-                    if (Console.ReadLine() == ab)
+                    // If the option is "u" uppercase, else lowercase.
+                    if (options == "u")
                     {
-                        Console.WriteLine(upper + "\n");
+                        Console.WriteLine(input.ToUpper() + "\n");
                     }
-                else
+                    else if (options == "l")
                     {
-                        Console.WriteLine(lower + "\n");
+                        Console.WriteLine(input.ToLower() + "\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine(options + " is not a valid option!");
                     }
                     break;
 
                     case 2:
                     Console.WriteLine("\n");
-                    // Today's date.
-                    DateTime date = DateTime.Today;
-                    // What day it is today.
-                    DayOfWeek dow = DateTime.Now.DayOfWeek;
-                    // Using Interpolation.
-                    string D = $"Today is {date}. It is a beautiful {dow}.";
-                    Console.WriteLine(D + "\n");
+                    Console.WriteLine($"Today is {DateTime.Today:D}. It is a beautiful {DateTime.Now.DayOfWeek}." + "\n");
                     break;
 
                     case 3:
                     Console.WriteLine("\n");
                     // Requesting the user's input.
-                    Console.WriteLine("Please enter a number");
-                    // Stored the data in a.
-                    int a = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter a number.");
+                    // The data is stored in "num1".
+                    int num1 = Convert.ToInt32(Console.ReadLine());
                     // Requesting the user's input.
-                    Console.WriteLine("Please enter another number");
-                    // Stored the data in b.
-                    int b = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter another number.");
+                    // The data is stored in "num1".
+                    int num2 = Convert.ToInt32(Console.ReadLine());
                     // Requesting the user's input.
-                    Console.WriteLine("Please enter an arithmetic operator, either addition or subtraction");
-                    // Stored the data in opr.
-                    var opr = Console.ReadLine();
+                    Console.WriteLine("Please enter an arithmetic operator, either addition or subtraction.");
+                    // The operator is stored in "arithmetic"".
+                    var arithmetic = Console.ReadLine();
                     Console.WriteLine("\n");
-                    // The arithmetic operator "+" is stored in o.
-                    var o = "+";
 
                     // Addition.
-                    int add = a + b;
+                    int add = num1 + num2;
                     // Subtraction
-                    int sub = a - b;
-
-                    string res = $"The result of adding {a} and {b} is {add}.";
-                    string resu = $"The result of subtracting {a} and {b} is {sub}.";
+                    int sub = num1 - num2;
 
                     // If the operator is "+" addition, else subtraction.
-                    if (opr == o)
+                    if (arithmetic == "+")
                     {
-                        Console.WriteLine(res + "\n");
+                        Console.WriteLine($"The result of adding {num1} and {num2} is {add}." + "\n");
+                    }
+                    else if (arithmetic == "-")
+                    {
+                        Console.WriteLine($"The result of subtracting {num1} and {num2} is {sub}." + "\n");
                     }
                     else
                     {
-                        Console.WriteLine(resu + "\n");
+                        Console.WriteLine(arithmetic + " is not a valid operator! Please enter either plus or minus!");
                     }
                     break;
 
                     case 4:
+                    Console.WriteLine("\n");
+                    Console.WriteLine("This option is to terminate the program.");
+                    break;
+
+                    default:
+                    Console.WriteLine("\n");
+                    Console.WriteLine(userOptions + " is not a valid option");
                     break;
             }
             Console.WriteLine("\n");
