@@ -17,7 +17,7 @@ namespace Console_Application
                 // Making sure the user can only input interger values.
                 if (!int.TryParse(Console.ReadLine(), out int userOptions))
                 {
-                    Console.WriteLine("Invalid input. Read please!");
+                    Console.WriteLine("Invalid input. Please choose between the given options.");
                     continue;
                 }
 
@@ -63,7 +63,7 @@ namespace Console_Application
                         // The data is stored in "num1".
                         if (!int.TryParse(Console.ReadLine(), out int num1))
                         {
-                            Console.WriteLine("Invalid input. Read please!");
+                            Console.WriteLine("Invalid input. Please enter a number.");
                             break;
                         }
 
@@ -72,7 +72,7 @@ namespace Console_Application
                         // The data is stored in "num2".
                         if (!int.TryParse(Console.ReadLine(), out int num2))
                         {
-                            Console.WriteLine("Invalid input. Read please!");
+                            Console.WriteLine("Invalid input. Please enter a number.");
                             break;
                         }
 
@@ -84,13 +84,11 @@ namespace Console_Application
                         // Based on the operator input, we will perform addition or subtraction.
                         if (arithmetic == "+")
                         {
-                            int add = num1 + num2;
-                            Console.WriteLine($"The result of adding {num1} and {num2} is {add}.\n");
+                            Console.WriteLine($"The result of adding {num1} and {num2} is {num1 + num2}.\n");
                         }
                         else if (arithmetic == "-")
                         {
-                            int sub = num1 - num2;
-                            Console.WriteLine($"The result of subtracting {num1} and {num2} is {sub}.\n");
+                            Console.WriteLine($"The result of subtracting {num1} and {num2} is {num1 - num2}.\n");
                         }
                         else
                         {
