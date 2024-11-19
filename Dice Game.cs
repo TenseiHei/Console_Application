@@ -24,7 +24,7 @@ namespace Console_Application
                 }
 
                 // Using switch case.
-                switch(useroptions)
+                switch (useroptions)
                 {
                     // This case generates a random number between 1 and 6.
                     case 1:
@@ -51,3 +51,30 @@ namespace Console_Application
         }
     }
 }
+
+
+
+//class Program
+//{
+//    static int ReverseNumber(int number)
+//    {
+//        string numberStr = number.ToString();
+
+//        string reversedStr = new string(numberStr.Reverse().ToArray());
+
+//        int reversedNumber = int.Parse(reversedStr);
+
+//        return reversedNumber;
+//    }
+
+//    static void Main()
+//    {
+//        int num = 12345;
+//        int reversedNum = ReverseNumber(num);
+//        Console.WriteLine("Original number: " + num);
+//        Console.WriteLine("Reversed number: " + reversedNum);
+//        Console.ReadLine();
+//    }
+//}
+
+
