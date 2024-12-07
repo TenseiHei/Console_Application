@@ -1,30 +1,39 @@
-Assignment: Simple Text Formatter and Date Checker
 
-Objective: Create a console application that helps users with string formatting, date checking, and basic arithmetic operations.
-Requirements
+//Instructions:
+//Objective: Design and implement a simple card game in C# using the principles of object-oriented programming (OOP).
 
-	Switch Case:
-    	Create a menu that allows users to choose one of the following actions:
-        	1: Format text (make upper or lower case).
-        	2: Check today's date and day of the week.
-        	3: Perform basic arithmetic (addition, subtraction) on two numbers.
-        	4: Exit the program.
+//Requirements:
 
-	Date and Time:
-    	When the user selects option 2, display the current date and time, along with the day of the week.
+//Create a Card class to represent individual cards.
+//Create a Deck class to manage a standard deck of 52 playing cards.
+//Create a Player class to represent players in the game, each with their own hand of cards.
+//Implement a CardGame class to handle the game logic, including shuffling the deck, dealing cards, and determining the winner.
+//Write a Main program that allows users to:
+//Enter the number of players and their names.
+//Play the game and display results, including each player’s hand and the winner.
+//Gameplay:
 
-	String Manipulation:
-    	For option 1, prompt the user to enter a string and a choice for:
-        	Convert to upper case
-        	Convert to lower case
-    	Display the result.
+//We will bee using "High Card" as our game of choice:
+//In "High Card", each player is dealt a single card, and the player with the highest card wins.
+//Implement rules specific to the chosen game in the CardGame class.
 
-	Passing Numeric Input:
-    	For option 3, ask the user to enter two numbers and an operation (addition or subtraction).
-    	Display the result of the chosen arithmetic operation.
 
-	Concatenation and Interpolation:
-    	Use concatenation and string interpolation to format your output, such as:
-        	"Today is [date]. It's a beautiful [day]."
-        	"The result of adding [number1] and [number2] is [result]."
+//Enhancements(Optional):
 
+//Allow replaying the game without restarting the program.
+//Add support for multiple rounds or additional game rules.
+//Include error handling for invalid inputs.
+//Deliverables:
+
+//A complete and well-documented C# project.
+//Ensure that your code demonstrates OOP principles such as encapsulation, inheritance (if applicable), and abstraction.
+//Provide comments explaining key parts of your code.
+//Evaluation Criteria:
+
+//Correct implementation of the game logic.
+//Proper use of OOP principles.
+//Code readability, including meaningful class and method names, proper indentation, and comments.
+//Functionality and user experience.
+
+
+//Link to how High Card is Played : https://www.pagat.com/invented/high_card.html
