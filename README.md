@@ -1,20 +1,3 @@
-﻿using System;
-
-namespace Console_Application // Match the namespace of both files
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var game = new CardGame();
-            game.StartGame();
-        }
-    }
-}
-
-
-
-        
 
 //Instructions:
 //Objective: Design and implement a simple card game in C# using the principles of object-oriented programming (OOP).
