@@ -5,21 +5,45 @@ namespace Console_Application
 {
     public class Player
     {
-        public string Name { get; set; }             // The player's name
-        public List<Card> Hand { get; set; }         // The player's hand stores multiple cards.
-        public int Score { get; set; }              // Score property.
-        public string Declaration { get; set; }
+        private string name;                // The player's name
+        private List<Card> hand;            // The player's hand stores multiple cards.
+        private int score;                  // Score property.
+        private string declaration;
+
+        public string Name
+        {
+            get => name;
+            set => name = value;
+        }
+
+        public List<Card> Hand
+        {
+            get => hand;
+            set => hand = value;
+        }
+
+        public int Score
+        {
+            get => score;
+            set => score = value;
+        }
+
+        public string Declaration
+        {
+            get => declaration;
+            set => declaration = value;
+        }
 
         public Player(string name)
         {
-            Name = name;
-            Hand = new List<Card>();    // We initialize the hand as an empty list.
-            Score = 0;
+            this.name = name;
+            hand = new List<Card>();    // We initialize the hand as an empty list.
+            score = 0;
         }
 
         public void AddCardToHand(Card card)
         {
-             Hand.Add(card);   // Add the card to the player's hand.
+             hand.Add(card);   // Add the card to the player's hand.
         }
 
         public void ShowHand()
@@ -29,7 +53,7 @@ namespace Console_Application
 
         public void ResetHand()
         {
-            Hand.Clear();
+            hand.Clear();
         }
     }
 }

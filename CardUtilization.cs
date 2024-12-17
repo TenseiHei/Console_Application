@@ -11,7 +11,10 @@ namespace Console_Application
 
         public static int GetCardValue(string face) => FaceOrder.IndexOf(face);
 
-        public static readonly string[] Suits = { "Hearts", "Clubs", "Diamonds", "Spades" };
-        public static readonly string[] Faces = FaceOrder.ToArray();
+        private static readonly string[] suits = { "Hearts", "Clubs", "Diamonds", "Spades" };
+        private static readonly string[] faces = FaceOrder.ToArray();
+
+        public static string[] Suits => suits;
+        public static string[] Faces => faces;
     }
 }

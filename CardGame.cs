@@ -140,15 +140,15 @@ namespace Console_Application
                     Console.WriteLine($"\nEnter the name for player {i}: ");
                     string playerName = Console.ReadLine()?.Trim();  // Trim removes unnecessary whitespaces around the input.
 
-                    // The validation ensures that the name is not empty, contains only letters and are not identical.
-                    if (!string.IsNullOrEmpty(playerName) && playerName.All(char.IsLetter) && !players.Exists(p => string.Equals(p.Name, playerName, StringComparison.OrdinalIgnoreCase)))   // Case-insensitive check.
+                    // The validation ensures that the name is not empty, contains only letters and numbers and are not identical.
+                    if (!string.IsNullOrEmpty(playerName) && playerName.All(c => char.IsLetterOrDigit(c)) && !players.Exists(p => string.Equals(p.Name, playerName, StringComparison.OrdinalIgnoreCase)))   // Case-insensitive check.
                     {
                         players.Add(new Player(playerName));
                         break;  // Valid input, we'll then exit the loop.
                     }
                     else
                     {
-                        Console.WriteLine("\nInvalid input or duplicate name. Plaese try again.\n");
+                        Console.WriteLine("\nInvalid input or duplicate name. Plaese ensure that the name contains only letters and numbers and each name is unique.\n");
                     }
                 }
             }
